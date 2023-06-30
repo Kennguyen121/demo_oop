@@ -15,11 +15,11 @@ public:
 	{
 		name = _name;
 	}
+	//methods
 	std::string get_name()
 	{
 		return name;
 	}
-	//methods
 	virtual void makeSound() = 0;
 };
 
