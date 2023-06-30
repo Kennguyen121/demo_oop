@@ -20,7 +20,7 @@ public:
 		return name;
 	}
 	//methods
-	virtual void makeSound() {}
+	virtual void makeSound() = 0;
 };
 
 class Dog : public Animal {
