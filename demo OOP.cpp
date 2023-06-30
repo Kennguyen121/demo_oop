@@ -6,7 +6,7 @@
 
 class Animal
 {
-protected:
+private:
 	//attributes
 	std::string name;
 public:
@@ -15,12 +15,12 @@ public:
 	{
 		name = _name;
 	}
-
-	//methods
-	virtual void makeSound() 
+	std::string get_name()
 	{
-		std::cout << "Animals make sound" << std::endl;
+		return name;
 	}
+	//methods
+	virtual void makeSound() {}
 };
 
 class Dog : public Animal {
@@ -31,11 +31,11 @@ public:
 	//methods
 	void makeSound() 
 	{
-		std::cout << name << " make sound" << std::endl;
+		std::cout << get_name() << " make sound" << std::endl;
 	}
 	void fetch() 
 	{
-		std::cout << name << " are fetching" << std::endl;
+		std::cout << get_name() << " are fetching" << std::endl;
 	}
 };
 
@@ -47,11 +47,11 @@ public:
 	//methods
 	void makeSound()
 	{
-		std::cout << name << " make sound" << std::endl;
+		std::cout << get_name() << " make sound" << std::endl;
 	}
 	void scratch() 
 	{
-		std::cout << name << " are scratching" << std::endl;
+		std::cout << get_name() << " are scratching" << std::endl;
 	}
 };
 
